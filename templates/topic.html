@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Topic Page Selector</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='static/topic.css'>
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">  		<!-- font-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />				<!-- for animation -->
+    <script src='main.js'></script>
+</head>
+<body>
+{% block content %}
+<li><a class="a_color" href="login">Logout</a></li>
+{% if user.is_authenticated %}
+    <li>Hello, {{user.first_name}}</li>
+
+{% endif %}
+        <main class="container"> 
+        <section class="card">
+            <img src="static/program.jpg" alt="">
+            <div>
+                <h3>Programming</h3>
+                <p>Select from plethora of topic Programming, from Python to Java.</p>
+                <a href="question" class="btn">Play Now </a>
+            </div>
+        </section>
+
+        <section class="card">
+            <img src="static/anime.jpeg" alt="">
+            <div>
+                <h3>ANIME</h3>
+                <p>Select from plethora of topic Dragon Ball, from goku to Dexters.</p>
+                <a href="#" class="btn">Play Now </a>
+            </div>
+        </section>
+
+        <section class="card" data-aos="fade-left">
+            <img src="static/cricket.jpeg" alt="" >
+            <div>
+                <h3>Cricket</h3>
+                <p>Select from plethora of topic Cricket, from Virat to all matches.</p>
+                <a href="#" class="btn">Play Now </a>
+            </div>
+        </section>
+
+        <section class="card" data-aos="fade-right">
+            <img src="static/movie.jpeg" alt="" >
+            <div>
+                <h3>Movies</h3>
+                <p>Select from plethora of topic Movies, from Bollywood to Hollywood.</p>
+                <a href="#" class="btn">Play Now </a>
+            </div>
+        </section>
+
+        <section class="card" data-aos="fade-left"> 
+            <img src="static/song.jpg" alt="" >
+            <div>
+                <h3>Songs</h3>
+                <p>Select from plethora of topic Songs, from English to Hindi.</p>
+                <a href="#" class="btn">Play Now </a>
+            </div>
+        </section>
+    </main>   
+   
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+          offset:400,
+          duration:1000
+      });
+    </script>
+{% endblock %}
+</body>
+</html>
