@@ -1,0 +1,93 @@
+body{
+	margin:0;
+	color:#6a6f8c;
+	background-image:url("quiz.jpg") ;
+	font:600 16px/18px 'Open Sans',sans-serif;
+}
+*,:after,:before{box-sizing:border-box}
+
+.forgot{					/* for setting body of login*/
+	width:100%;
+	margin:80px;
+	margin-left:35%;
+	max-width:525px;
+	min-height:600px;
+	position:relative;
+	/*background-image:url("questionmark.jpg") ;*/
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+.forgot-html{					/*for body of login*/
+	width:100%;
+	height:100%;
+	position:absolute;
+	padding:90px 70px 50px 70px;
+	background:rgba(40,57,101,.9);
+}
+.login-html .sign-in-htm{				/*For sign-in and sign-up buttons*/
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	position:absolute;
+	transform:rotateY(180deg);
+	backface-visibility:hidden;
+	transition:all .4s linear;
+}
+
+					
+.forgot-form .group .label,				/* for making letter in uppercase o button,radio ie sign-in and sign-up*/
+.forgot-form .group .button{
+	text-transform:uppercase;
+}
+
+.forgot-form{
+	min-height:345px;					/* for giving place of components */
+	position:relative;
+	perspective:1000px;
+	transform-style:preserve-3d;
+}
+.forgot-form .group{						/*defining space below each component*/
+	margin-bottom:15px;
+}
+.forgot-form .group .label,
+.forgot-form .group .input,
+.forgot-form .group .button{					/*for gives size to components*/
+	width:100%;
+	color:#fff;
+	display:block;
+}
+.forgot-form .group .input,
+.forgot-form .group .button{
+	border:none;					/*for gives other features to components except label*/
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(255,255,255,.1);
+}
+
+
+.forgot-form .group .button{					/*color to button*/
+	background:#1161ee;
+
+}
+
+.forgot-html .sign-in: .sign-up + .tab + .forgot-form .sign-in-htm{		/*for animation of going to sign-up*/
+	transform:rotate(0);
+}
+
+h1{
+color:white;
+text-align:center;
+}
+
+a {
+  color: white;
+}
+
+.hr{
+	height:2px;							/*for line after button*/
+	margin:60px 0 50px 0;
+	background:rgba(255,255,255,.2);
+}
+.foot-lnk{
+	text-align:center;							/*for already member and forget alignment*/
+}
